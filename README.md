@@ -1,2 +1,5 @@
-Person ghost theme for my blog at [mackenzie.io](http://www.mackenzie.io).
+#M - A Ghost Theme
+======
+
+Theme for my personal blog at [mackenzie.io](http://www.mackenzie.io).
 
