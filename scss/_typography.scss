@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'm';
+	src:url('../fonts/m.eot');
+	src:url('../fonts/m.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/m.woff') format('woff'),
+		url('../fonts/m.ttf') format('truetype'),
+		url('../fonts/m.svg#m') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'm';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-m:before {
+	content: "\e600";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.icon-dribbble:before {
+	content: "\e602";
+}
+.icon-instagram:before {
+	content: "\e603";
+}
+.icon-behance:before {
+	content: "\e604";
+}
+.icon-facebook:before {
+	content: "\e605";
+}
+.icon-googleplus:before {
+	content: "\e606";
+}
+.icon-tumblr:before {
+	content: "\e607";
+}
+.icon-linkedin:before {
+	content: "\e608";
+}
+.icon-list:before {
+	content: "\e609";
+}
+.icon-arrow-right:before {
+	content: "\e60a";
+}
+.icon-arrow-left:before {
+	content: "\e60b";
+}

@@ -1,0 +1,75 @@
+@media only screen and (max-width: 900px) {
+
+	.sidebar_m {
+		display: none;
+	}	
+	.main_content_m {
+		margin: 0;
+		width: 100%;
+		.main_content_header_m {
+			background: #fff url(../images/background.jpg) no-repeat center center;
+			background-size: cover;
+			border: none;
+			.logo_symbol_m {
+				color: #D0DAE7;
+			}
+			.main_content_nav_m {
+				a {
+					color: #D0DAE7;
+				}
+			}
+		}
+		.post_m {
+			.post_wrapper_m {
+				padding: 1em 10%;
+			}
+		}
+	}
+	footer {
+		position: relative;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	blockquote {
+		margin: 0;
+	}
+
+	.nav_small_m {
+		display: block;
+		float: right;
+		span {
+			color: #D0DAE7;
+			font-size: 1.9em;
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+	
+	.main_content_m {
+		.main_content_header_m {
+			.main_content_nav_m {
+				width: 100%;
+				margin-top: 1.5em;
+				a {
+					width: 100%;
+					padding: 0.7em 0;
+					margin: 0;
+					border-top: 1px solid #D0DaE7;
+					text-align: left;
+				}
+			}
+		}
+		.post_m {
+			.about_m {
+				.profile_pic_m {
+					display: none;
+				}
+			}
+		}
+	}
+}

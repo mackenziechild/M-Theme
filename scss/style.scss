@@ -1,0 +1,346 @@
+@import 'typography';
+
+$transitionColor: color ease 0.3s;
+$light:           #9fa9b7;
+$dark:            #6A798D;
+$mediumBlueGray:  #8C9BA6;
+$borderColor:     #e5eaeb;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Avenir Next', Helvetica, sans-serif;
+  font-size:100%;
+  line-height:1.875em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: $dark;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 2.25em;
+  line-height: 1.25em;
+}
+
+h2 {
+  font-size: 1.75em;
+  margin:1em 0;
+}
+
+h3 {
+  font-size: 1.375em;
+}
+
+p {
+  font-size: 0.95em;
+  margin: 1.286em 0;
+}
+
+a {
+  text-decoration: none;
+  transition: $transitionColor;
+}
+
+blockquote {
+  border-left: 10px solid $dark;
+  padding-left: 2em;
+  margin: 2em 0 2em -2em;
+  font-style: italic;
+  line-height: 2em;
+}
+
+hr {
+  min-height: 1px;
+  margin: 3em 0;
+  background: $borderColor;
+  color: $borderColor;
+  border: none;
+}
+
+code {
+  display: inline;
+  background: $dark;
+  padding: .5em .75em;
+  color: #C0C5CE;
+}
+
+.vertical_m {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.clear {
+  clear: both;
+}
+
+.nav_small_m {
+  display: none;
+}
+
+.sidebar_m {
+  display: table;
+  background: #fff url(../images/background.jpg) no-repeat center center;
+  background-size: cover;
+  width: 32.5rem;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  .logo_m {
+    width: 15rem;
+  }
+  .tagline_m {
+    font-style: italic;
+    color: #bbcadd;
+    margin-top: .25em;
+  }
+  .social_icons_m {
+    color: #e0eaf8;
+    margin: 0 3%;
+    transition: $transitionColor;
+    &:hover {
+      color: #21252c;
+    }
+  }
+}
+
+.main_content_m {
+  margin: 0 0 0 32.5rem;
+  .main_content_header_m {
+    padding: 1.25em 2.5em;
+    border-bottom: 1px solid $borderColor;
+    .logo_symbol_m {
+      font-size: 1.9em;
+      color: $mediumBlueGray;
+      width: 10%;
+      float: left;
+    }
+    .main_content_nav_m {
+      float: right;
+      width: 90%;
+      a {
+        float: right;
+        text-align: right;
+        font-weight: 500;
+        font-size: .75em;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin: 0 2.5%;
+        text-decoration: none;
+        color: $mediumBlueGray;
+        transition: $transitionColor;
+        &:hover {
+          color: $light;
+        }
+      }
+    }
+  }
+  .post_m {
+    color: $mediumBlueGray;
+    .post_wrapper_m {
+      padding: 1em 7.5em 3em 7.5em;
+      border-bottom: 1px solid $borderColor;
+    }
+    a {
+      color: $dark;
+      text-decoration: underline;
+      &:hover {
+        color: #80919d;
+      }
+    }
+    .post_header_m {
+      margin: 1.286em 0 0 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.375em;
+      letter-spacing: -1px;
+      a {
+        text-decoration: none;
+        color: $dark;
+        transition: $transitionColor;
+        &:hover {
+          color: $light;
+        }
+      }
+      .time_tags {
+        font-weight: 500;
+        font-style: italic;
+        font-size: 0.6em;
+        margin: 0;
+        padding: 0;
+        text-transform: none;
+        letter-spacing: normal;
+      }
+    }
+  }
+  .share_m {
+    text-align: center;
+    font-size: .85em;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    padding: 0 0 2em 0;
+    p {
+      margin-top: 0;
+    }
+    a {
+      transition: $transitionColor;
+      text-decoration: none;
+    }
+    .share_button_m {
+      display: inline;
+      color: $light;
+      border: 2px solid $light;
+      padding: .5em 2em;
+      border-radius: 1.5em;
+      margin: 0 1.5%;
+      transition: $transitionColor;
+      &:hover {
+        color: $dark;
+        border: 2px solid $dark; 
+      }
+    }
+  }
+  .about_m {
+    display: table;
+    border-top: 1px solid $borderColor;
+    // border-bottom: 1px solid $borderColor;
+    padding: 2em 0;
+    margin-top: 1em;
+    width: 100%;
+    .profile_pic_m {
+      width: 8em;
+      border-radius: 4em;
+      float: left;
+    }
+    .author_info_m {
+      display: table-cell;
+      vertical-align: middle;
+      .author_name_m {
+        font-size: 1.125em;
+        margin: 0;
+      }
+      .author_excerpt_m {
+        font-size: .75em;
+        line-height: 1.8em;
+        margin: 0;
+        a {
+          color: $dark;
+          text-decoration: underline;
+          &:hover {
+            color: #80919d;
+          }
+        }
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// Pagination
+
+/* The main wrapper for our pagination links */
+.pagination {
+  position: relative;
+  display: table;
+  width: 86%;
+  // max-width: 700px;
+  margin: 1rem auto;
+  font-family: 'Open Sans', sans-serif;
+  // font-size: .85em;
+  color: $light;
+  text-align: center;
+  span.icon-m {
+    margin: 0 2em;
+    color: $borderColor;
+  }
+  .icon-arrow-left, .icon-arrow-right {
+    // font-size: 2em;
+    margin-bottom: -1em;
+  }
+}
+
+.pagination a {
+    color: $light;
+}
+
+.pagination_inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+  position: absolute;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $dark;
+  font-weight: 700;
+  // font-size: 1.25em;
+  letter-spacing: -1px;
+  transition: border ease 0.3s;
+  // padding-bottom: 3em;
+  text-align: center;
+  // border: 1px solid $light;
+  // padding: .5em 3em;
+  // border-radius: 2em;
+}
+
+.older-posts {
+    right: 0;
+}
+
+.page-number {
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.newer-posts {
+    left: 0;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+    border-color: #9EABB3;
+}
+
+.about_profile_pic {
+  width: 120px;
+  border-radius: 60px;
+  // float: left;
+  margin-top: 2em;
+  // margin: 2em auto 0;
+  // display: block;
+}
+
+
+footer {
+  position: fixed;
+  width: 32.5rem;
+  bottom: 0;
+  text-align: center;
+  .copyright {
+    font-size: .65em;
+    color: #a8b0ba;
+    a {
+      color: #a8b0ba;
+      text-decoration: underline;
+    }
+  }
+}
+
+@import 'obsidian';
+@import 'mediaqueries';

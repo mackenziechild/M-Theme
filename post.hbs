@@ -1,0 +1,68 @@
+{{!< default}}
+
+<aside class="sidebar_m">
+  <div class="vertical_m">
+    <a href="/"><img class="logo_m" src="../assets/images/logo.svg" alt="Mackenzie Child Logo"></a>
+    <p class="tagline_m">Designer. Front-End Developer.</p>
+    <a href="https://twitter.com/mackenziechild"><span class="social_icons_m icon-twitter"></span></a>
+    <a href="http://dribbble.com/mackenzie"><span class="social_icons_m icon-dribbble"></span></a>
+    <a href="http://instagram.com/mackenziechild"><span class="social_icons_m icon-instagram"></span></a>
+  </div>
+</aside>
+
+<main class="main_content_m" role="main">
+  <header class="main_content_header_m">
+    <a href="/"><span class="icon-m logo_symbol_m"></span></a>
+    <nav class="main_content_nav_m">
+      <a href="/about.html">About</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/">Thoughts</a>
+    </nav>
+    <div class="clear"></div>
+  </header>
+
+	{{#post}}
+		<article class="post_m">
+      <div class="post_wrapper_m">
+        <h1>{{title}}</h1>
+        {{content}}
+
+        <div class="share_m">
+          <p>Share this post</p>
+          <a target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="share_button_m icon-twitter"></span></a>
+          <a target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="share_button_m icon-facebook"></span></a>
+          <a target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="share_button_m icon-googleplus"></span></a>
+        </div>
+
+        {{#if author}}
+          <div class="about_m">
+            {{#if author.image}}
+              <img class="profile_pic_m" src="{{author.image}}">
+            {{/if}}
+            <div class="author_info_m">
+              <h2 class="author_name_m">{{author.name}}</h2>
+              <p class="author_excerpt_m">{{author.bio}}</p>
+            </div>
+          </div>
+        {{/if}}
+
+        <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'mackenziechild'; // required: replace example with your forum shortname
+          var disqus_identifier = '{{post.id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </article>
+  {{/post}}
+</main>
+
+{{> footer}}

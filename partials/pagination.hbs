@@ -1,0 +1,11 @@
+<nav class="pagination" role="pagination">
+	<div class="pagination_inner">
+    {{#if prev}}
+        <a class="newer-posts" href="{{pageUrl prev}}"><span class="icon-arrow-left"></span> Less</a>
+    {{/if}}
+    <span class="icon-m nav_logo_symbol_m"></span>
+    {{#if next}}
+        <a class="older-posts" href="{{pageUrl next}}">More <span class="icon-arrow-right"></span> </a>
+    {{/if}}
+  </div>
+</nav>

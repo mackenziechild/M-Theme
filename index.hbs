@@ -1,0 +1,47 @@
+{{!< default}}
+
+<aside class="sidebar_m">
+	<div class="vertical_m">
+		<a href="/"><img class="logo_m" src="/assets/images/logo.svg" alt="Mackenzie Child Logo"></a>
+		<p class="tagline_m">Designer. Front-End Developer.</p>
+		<a href="https://twitter.com/mackenziechild"><span class="social_icons_m icon-twitter"></span></a>
+		<a href="http://dribbble.com/mackenzie"><span class="social_icons_m icon-dribbble"></span></a>
+		<a href="http://instagram.com/mackenziechild"><span class="social_icons_m icon-instagram"></span></a>
+	</div>
+</aside>
+
+<main class="main_content_m" role="main">
+	<header class="main_content_header_m">
+			<a href="/"><span class="icon-m logo_symbol_m"></span></a>
+			<nav class="main_content_nav_m">
+				<a href="/about.html">About</a>
+				<a href="/projects.html">Projects</a>
+				<a href="/">Thoughts</a>
+			</nav>
+			<div class="clear"></div>
+		</header>
+
+		{{#foreach posts}}
+			<article class="post_m">
+				<div class="post_wrapper_m">
+					<header class="post_header_m">
+						<a href="{{{url}}}">{{title}}</a>
+						{{#if tags}}
+							<p class="time_tags">{{tags}}</p>
+						{{/if}}
+					</header>
+					<section class="post_excerpt_m">
+						<p>{{excerpt}}</p>
+					</section>
+				</div>
+			</article>
+		{{/foreach}}	
+
+	{{#if pagination}}
+		<div class="pagination">
+			{{{pagination}}}
+		</div>
+	{{/if}}
+</main>
+
+{{> footer}}
